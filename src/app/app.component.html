@@ -1,0 +1,18 @@
+<div>
+  <label for="locales">Locales</label>
+  <select [(ngModel)]="selectedLocale" (change)="onChangeLocale($event)" class="form-control" id="locales" name="locales">
+    <option *ngFor="let locale of locales" [value]="locale">{{locale}}</option>
+  </select>
+</div>
+<br>
+<div>
+  <label for="inputAmount">Input Amount</label>
+  <input type="text" id="inputAmount" [value]="inputAmount" 
+      name="inputAmount"
+      [(ngModel)]="inputAmount" (change)="onChangeAmount($event)">
+</div>
+<br>
+<div>
+  <label>English Amount</label>
+  <div>{{ outputAmount }} </div>
+</div>
